@@ -33,7 +33,7 @@ gummies.addEventListener("click", () => {
 
 //========================MAKE MONEY=================================
 
-let coins = ["penny", "nickel", "dime", "quarter"];
+// let coins = ["penny", "nickel", "dime", "quarter"];
 
 let moneyForm = document.querySelector(".money-form");
 
@@ -51,21 +51,26 @@ moneyForm.addEventListener("submit", (e) => {
 //====================lightbulb=====================
 
 let lightBulb = document.querySelector(".light-bulb");
-let on = document.querySelector("on");
-let off = document.querySelector("off");
-let toggle = document.querySelector("toggle");
-let end = document.querySelector("end");
+let onBtn = document.querySelector(".on");
+let offBtn = document.querySelector(".off");
+let toggleBtn = document.querySelector(".toggle");
+let endBtn = document.querySelector(".end");
 
-on.addEventListener("click", () => {
+onBtn.addEventListener("click", () => {
   lightBulb.classList.add("light");
 });
 
-off.addEventListener("click", () => {
-  lightBulb.classList.remove("dark");
+offBtn.addEventListener("click", () => {
+  lightBulb.classList.remove("light");
 });
 
-toggle.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   lightBulb.classList.toggle("light");
 });
 
-end.addEventListener("click", () => {});
+endBtn.addEventListener("click", () => {
+  lightBulb.remove();
+  buttons.forEach((item) => {
+    item.disabled = true;
+  });
+});

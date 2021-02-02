@@ -4,8 +4,8 @@
   background-color: yellow;
 }
 
-.dark {
-  background-color: gray;
+.lightBulb-container {
+  background-color: rgb(80, 77, 77);
 }
 
 .light-bulb {
